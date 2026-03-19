@@ -8,7 +8,7 @@ on:
       - main
 
 # ── 3. Jobs ──────────────────────────────────────────────────────
-jobs:
+jobs:      
   build:
     runs-on: ubuntu-latest
 

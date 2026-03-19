@@ -1,0 +1,21 @@
+# ── 1. Workflow name ─────────────────────────────────────────────
+name: Build and Push Docker Image
+
+# ── 2. Trigger ───────────────────────────────────────────────────
+on:
+  push:
+    branches:
+      - main
+
+# ── 3. Jobs ──────────────────────────────────────────────────────
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── 4. Checkout ──────────────────────────────────────────
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      # ── 5. Log in to GHCR ────────────────────────────────────
+      - name: Log in to GitHub Container Registry
